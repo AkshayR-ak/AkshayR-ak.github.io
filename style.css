@@ -1,0 +1,17 @@
+body {
+    background-image: url('images/top-view-business-office-desk-background-applying-job-form-pen-pencil-eyeglasses-tree-mobile-phone-w.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    font-size: 20px;
+    text-align: center;
+}
+
+header {
+    font-size: 50px;
+    text-align: center;
+    color: rgb(215, 212, 212);
+    background-color: black;
+}
