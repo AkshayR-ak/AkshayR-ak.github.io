@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            padding-top: 140px;
+            text-align: center;
+            background-image: url("calc.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Calculator in JS</h1>
+    <h4>Enter Number 1:</h4>
+    <input type="text" name="num1" id="num1">
+    <h4>Enter Number 2:</h4>
+    <input type="text" name="num2" id="num2"><br><br>
+    <button type="button" id="add" onclick="add()">Add</button>
+    <button type="button" id="sub" onclick="sub()">Sub</button>
+    <button type="button" id="multy" onclick="multy()">Multiply</button>
+    <button type="button" id="division" onclick="division()">Division</button>
+    <script>
+        var head = document.createElement('h2');
+        document.body.appendChild(head);
+        function add() {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            let addd = parseInt(num1) + parseInt(num2);
+            head.innerHTML = "The Addition of " + parseInt(num1) + " and " + parseInt(num2) + " is: " + addd;
+        }
+        function sub() {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            let subb = parseInt(num1) - parseInt(num2);
+            head.innerHTML = "The Subtraction of " + parseInt(num1) + " and " + parseInt(num2) + " is: " + subb;
+        }
+        function multy() {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            let multi = parseInt(num1) * parseInt(num2);
+            head.innerHTML = "The Multiplication of " + parseInt(num1) + " and " + parseInt(num2) + " is: " + multi;
+        }
+        function division() {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            let div = parseInt(num1) / parseInt(num2);
+            head.innerHTML = "The Divition of " + parseInt(num1) + " and " + parseInt(num2) + " is: " + div;
+        }
+    </script>
+    <button id="ch" style="font-size: 25px; ">Touch here to see magic....</button>
+    <script>
+        const btnch = document.getElementById('btn');
+        ch.addEventListener('click', function onClick(event) {
+            document.body.style.color = 'red';
+        });
+    </script>
+</body>
+
+</html>

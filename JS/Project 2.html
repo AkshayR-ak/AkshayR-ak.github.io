@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 140px;
+            text-align: center;
+            text-align: center;
+            background-image: url("todo.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>To-Do List using javascript:</h1>
+    <input type="text" id="taskInput" placeholder="Add a task...">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+    <script>
+        function addTask() {
+            const input = document.getElementById("taskInput");
+            const task = input.value.trim();
+
+            if (task !== "") {
+                const taskList = document.getElementById("taskList");
+                const li = document.createElement("li");
+                li.innerHTML = `
+<input type="checkbox" onchange="markAsDone(this)">
+<span>${task}</span>
+<button onclick="removeTask(this)">Remove</button>
+`;
+                taskList.appendChild(li);
+                input.value = "";
+            }
+        }
+
+
+        function markAsDone(checkbox) {
+            const taskText = checkbox.nextElementSibling;
+            if (checkbox.checked) {
+                taskText.style.textDecoration = "line-through";
+            } else {
+                taskText.style.textDecoration = "none";
+            }
+        }
+
+
+        function removeTask(button) {
+            const li = button.parentElement;
+            li.remove();
+        }
+    </script>
+</body>
+
+</html>
